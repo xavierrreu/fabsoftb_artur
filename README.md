@@ -36,3 +36,6 @@ git add .
 git commit -m "tipo: o que foi feito"
 git push -u origin main
 ```
+
+
+
