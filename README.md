@@ -37,5 +37,17 @@ git commit -m "tipo: o que foi feito"
 git push -u origin main
 ```
 
+### Ambiente de desenvolvimento JAVA
+[Eclipse Adoptium](https://adoptium.net/)
+[Microsoft OpenJDK](https://www.microsoft.com/openjdk)
+[AWS CORRETTO](https://aws.amazon.com/pt/corretto/)
+[VSCode](https://code.visualstudio.com/download)
+[Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 
+
+- JRE - Java Runtime Environment
+   - Java Virtual Machine JVM 
+     - java.exe / javaw.exe
+- JDK - Java Development Kit
+  - Compilar o java (javac.exe)
 
