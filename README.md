@@ -1,5 +1,8 @@
 # Fábrica de Software 2025/1
 
+## Nome da Equipe
+- Walter Coan
+
 ## Propostas de projeto
 
 - Nome do sistema Ex:(Sistema para Mecânica)
@@ -7,6 +10,23 @@
   - Funcionalidade 2
   - Funcionalidade 3
 
+<s>
+
+- Nome do sistema Ex:(Sistema para Mecânica)
+  - Funcionalidade 1
+  - Funcionalidade 2
+  - Funcionalidade 3
+
+</s>
+
+
+## Livro Eng Software Moderna
+[Eng. Soft Moderna - Requisitos](https://engsoftmoderna.info/cap3.html)
+
+## Histórias de Usuário
+- Como um Atendente eu gostaria de registrar os dados do cliente como: nome, endereço, telefone, email
+- Como um Atendente eu gostaria de registrar os dados do Carro do cliente como: marca, modelo, placa
+- Como um Atendente eu gostaria de vincular o Carro ao Cliente
 
 ## Comandos do Git
 
