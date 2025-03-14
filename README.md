@@ -1,7 +1,7 @@
 # Fábrica de Software 2025/1
 
-## Nome da Equipe
-- Walter Coan
+## Repositório dos alunos
+- [Repos](https://gist.github.com/d4e37df9f6772173110603fc8bf90b84.git)
 
 ## Propostas de projeto
 
