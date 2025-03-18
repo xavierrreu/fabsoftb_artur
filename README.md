@@ -71,3 +71,5 @@ git push -u origin main
 - JDK - Java Development Kit
   - Compilar o java (javac.exe)
 
+## Diagrama de classes
+![Diagrama](./diagramas/png/classes.png)
