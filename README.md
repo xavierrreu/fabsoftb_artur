@@ -27,6 +27,10 @@
 - Como um Atendente eu gostaria de registrar os dados do cliente como: nome, endereço, telefone, email
 - Como um Atendente eu gostaria de registrar os dados do Carro do cliente como: marca, modelo, placa
 - Como um Atendente eu gostaria de vincular o Carro ao Cliente
+- Como um Atedente eu gostaria de agendar uma revisão com os seguintes dados: cliente, carro, data entrada, data saida, valor da revisão
+- Como um Atendente eu gostaria de vincular peças trocadas na revisão com os seguintes dados: codigo, nome, preço unitário
+- Como um Atendente eu gostaria de vincular os serviços de mão de obra realizados na revisão com os seguintes dados: nome do funcionário, quantidade de horas, valor
+
 
 ## Comandos do Git
 
