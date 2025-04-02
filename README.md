@@ -77,3 +77,23 @@ git push -u origin main
 
 ## Diagrama de classes
 ![Diagrama](./diagramas/png/classes.png)
+
+
+## Prompts Aula 01/04/2025
+- Encontrar as entidades nas histórias de usuário
+```bash
+@workspace #sym:## Histórias de Usuário quais são as entidades
+```
+- Gerar as classes java das entidades
+```bash
+@workspace por favor, crie as classe em java no pacote entity para representar as entidades
+```
+- Gerar o Diagrama de Classes de Entidade (Domínio)
+```bash
+@workspace por favor gere um diagrama uml no padrão plantuml das classes do pacote br.univille.projfabsoft
+```
+- Instalar a extensão [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+
+## Diagrama de classes Entidade (Domínio)
+![Diagrama](./diagramas/png/classes_projfabsoft.png)
+

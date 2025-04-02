@@ -1,0 +1,101 @@
+@startuml
+skinparam classAttributeIconSize 0
+caption Diagrama de Classes - Pacote br.univille.projfabsoft.entity
+
+package br.univille.projfabsoft.entity {
+    class Cliente {
+        - Long id
+        - String nome
+        - String endereco
+        - String telefone
+        - String email
+
+        + getId(): Long
+        + setId(id: Long): void
+        + getNome(): String
+        + setNome(nome: String): void
+        + getEndereco(): String
+        + setEndereco(endereco: String): void
+        + getTelefone(): String
+        + setTelefone(telefone: String): void
+        + getEmail(): String
+        + setEmail(email: String): void
+    }
+
+    class Carro {
+        - Long id
+        - String marca
+        - String modelo
+        - String placa
+
+        + getId(): Long
+        + setId(id: Long): void
+        + getMarca(): String
+        + setMarca(marca: String): void
+        + getModelo(): String
+        + setModelo(modelo: String): void
+        + getPlaca(): String
+        + setPlaca(placa: String): void
+    }
+
+    class Revisao {
+        - Long id
+        - Cliente cliente
+        - Carro carro
+        - String dataEntrada
+        - String dataSaida
+        - Double valor
+        - List<Peca> pecasTrocadas
+        - List<Servico> servicosRealizados
+
+        + getId(): Long
+        + setId(id: Long): void
+        + getCliente(): Cliente
+        + setCliente(cliente: Cliente): void
+        + getCarro(): Carro
+        + setCarro(carro: Carro): void
+        + getDataEntrada(): String
+        + setDataEntrada(dataEntrada: String): void
+        + getDataSaida(): String
+        + setDataSaida(dataSaida: String): void
+        + getValor(): Double
+        + setValor(valor: Double): void
+        + getPecasTrocadas(): List<Peca>
+        + setPecasTrocadas(pecasTrocadas: List<Peca>): void
+        + getServicosRealizados(): List<Servico>
+        + setServicosRealizados(servicosRealizados: List<Servico>): void
+    }
+
+    class Peca {
+        - String codigo
+        - String nome
+        - Double precoUnitario
+
+        + getCodigo(): String
+        + setCodigo(codigo: String): void
+        + getNome(): String
+        + setNome(nome: String): void
+        + getPrecoUnitario(): Double
+        + setPrecoUnitario(precoUnitario: Double): void
+    }
+
+    class Servico {
+        - String nomeFuncionario
+        - Integer quantidadeHoras
+        - Double valor
+
+        + getNomeFuncionario(): String
+        + setNomeFuncionario(nomeFuncionario: String): void
+        + getQuantidadeHoras(): Integer
+        + setQuantidadeHoras(quantidadeHoras: Integer): void
+        + getValor(): Double
+        + setValor(valor: Double): void
+    }
+
+    Cliente "1" --> "*" Carro
+    Revisao "1" --> "1" Cliente
+    Revisao "1" --> "1" Carro
+    Revisao "1" --> "*" Peca
+    Revisao "1" --> "*" Servico
+}
+@enduml
