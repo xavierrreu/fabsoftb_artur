@@ -2,6 +2,7 @@ package br.univille.projfabsoft.entity;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -13,15 +14,19 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 200, nullable = false)
     private String nome;
     private String email;
+    @Column(length = 20000)
     private String historicoProfissional;
+    @Column(length = 20000)
     private String qualificacoes;
+    @Column(length = 20000)
     private String areasDeInteresse;
     @OneToMany
     private List<Projeto> projeto;
     @OneToOne
-    private PlanoDeAssinatura plano;
+    private PlanoDeAssinatura planoAssinado;
     @OneToMany
     private List<Curso> cursosInscrito;
     @OneToMany

@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.CascadeType;
 
 
 @Entity
@@ -14,7 +15,7 @@ public class Curso {
     private String titulo;
     private String descricao;
     private String conteudo;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.REFRESH}) //impede uma deleção em cascata de produtor de conteúdo em caso de ausência de cursos criados 
     private ProdutorDeConteudo produtor;
 
     // Getters e Setters
