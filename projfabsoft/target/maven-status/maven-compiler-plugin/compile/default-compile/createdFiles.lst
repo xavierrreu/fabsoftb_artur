@@ -1,0 +1,8 @@
+br\univille\projfabsoft\entity\PlanoDeAssinatura.class
+br\univille\projfabsoft\entity\Curso.class
+br\univille\projfabsoft\entity\Recrutador.class
+br\univille\projfabsoft\entity\ProdutorDeConteudo.class
+br\univille\projfabsoft\ProjfabsoftApplication.class
+br\univille\projfabsoft\entity\Projeto.class
+br\univille\projfabsoft\entity\TesteDeHabilidade.class
+br\univille\projfabsoft\entity\Usuario.class
