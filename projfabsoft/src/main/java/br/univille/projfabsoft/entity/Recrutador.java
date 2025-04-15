@@ -10,17 +10,17 @@ import jakarta.persistence.Id;
 public class Recrutador {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     @Column(length = 200, nullable=false)
     private String nome;
     private String nomeEmpresa;
 
     // Getters e Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

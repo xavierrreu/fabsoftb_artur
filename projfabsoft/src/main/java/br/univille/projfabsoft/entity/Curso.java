@@ -11,7 +11,7 @@ import jakarta.persistence.CascadeType;
 public class Curso {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String titulo;
     private String descricao;
     private String conteudo;
@@ -19,11 +19,11 @@ public class Curso {
     private ProdutorDeConteudo produtor;
 
     // Getters e Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

@@ -9,17 +9,17 @@ import jakarta.persistence.Id;
 public class PlanoDeAssinatura {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String nomePlano;
     private String beneficios;
     private Double preco;
 
     // Getters e Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
