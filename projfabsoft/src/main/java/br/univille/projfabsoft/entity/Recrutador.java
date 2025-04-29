@@ -24,6 +24,14 @@ public class Recrutador {
         this.id = id;
     }
 
+    public String getNome() {
+        return nomeEmpresa;
+    }
+
+    public void setNome(String nomeEmpresa) {
+        this.nomeEmpresa = nomeEmpresa;
+    }
+
     public String getNomeEmpresa() {
         return nomeEmpresa;
     }
