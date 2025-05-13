@@ -1,0 +1,26 @@
+### API USUARIO - GET
+GET http://localhost:8080/api/v1/testes
+
+### API USUARIO - POST
+POST http://localhost:8080/api/v1/testes
+Content-Type: application/json
+
+{
+    "titulo": "roberto",
+    "descricao": "roberto@gmail.com",
+    "pontuacao": "lalalala"
+}
+
+### API USUARIO - PUT
+PUT http://localhost:8080/api/v1/testes/1
+Content-Type: application/json
+
+{
+    "titulo": "roberto_novo",
+    "descricao": "roberto@gmail.com",
+    "pontuacao": "não tenho histórico",
+}
+
+### API USUARIO - DELETE
+DELETE http://localhost:8080/api/v1/testes/1
+Content-Type: application/json

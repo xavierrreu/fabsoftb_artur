@@ -1,0 +1,28 @@
+### API PLANO - GET
+GET http://localhost:8080/api/v1/planos
+
+### API PLANO - POST
+POST http://localhost:8080/api/v1/planos
+Content-Type: application/json
+
+{
+    "nome": "roberto",
+    "email": "roberto@gmail.com",
+    "qualificacoes": "lalalala"
+}
+
+### API PLANO - PUT
+PUT http://localhost:8080/api/v1/planos/1
+Content-Type: application/json
+
+{
+    "nome": "roberto_novo",
+    "email": "roberto@gmail.com",
+    "historicoProfissional": "não tenho histórico",
+    "qualificacoes": "lalalala",
+    "areasDeInteresse": "todas as areas"
+}
+
+### API PLANO - DELETE
+DELETE http://localhost:8080/api/v1/planos/1
+Content-Type: application/json

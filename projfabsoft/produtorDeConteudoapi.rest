@@ -1,0 +1,22 @@
+### API PRODUTOR - GET
+GET http://localhost:8080/api/v1/produtores
+
+### API PRODUTOR - POST
+POST http://localhost:8080/api/v1/produtores
+Content-Type: application/json
+
+{
+    "nome": "roberto"
+}
+
+### API PRODUTOR - PUT
+PUT http://localhost:8080/api/v1/produtores/1
+Content-Type: application/json
+
+{
+    "nome": "roberto_novo"
+}
+
+### API PRODUTOR - DELETE
+DELETE http://localhost:8080/api/v1/produtores/1
+Content-Type: application/json

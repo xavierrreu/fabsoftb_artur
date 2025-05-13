@@ -1,0 +1,24 @@
+### API RECRUTADOR - GET
+GET http://localhost:8080/api/v1/recrutadores
+
+### API RECRUTADOR - POST
+POST http://localhost:8080/api/v1/recrutadores
+Content-Type: application/json
+
+{
+    "nome": "roberto",
+    "nome empresa": "roberto@gmail.com"
+}
+
+### API RECRUTADOR - PUT
+PUT http://localhost:8080/api/v1/recrutadores/1
+Content-Type: application/json
+
+{
+    "nome": "roberto_novo",
+    "nome empresa": "roberto@gmail.com"
+}
+
+### API RECRUTADOR - DELETE
+DELETE http://localhost:8080/api/v1/recrutadores/1
+Content-Type: application/json

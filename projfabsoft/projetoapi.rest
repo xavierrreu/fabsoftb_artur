@@ -1,0 +1,26 @@
+### API PROJETO - GET
+GET http://localhost:8080/api/v1/projetos
+
+### API PROJETO - POST
+POST http://localhost:8080/api/v1/projetos
+Content-Type: application/json
+
+{
+    "titulo": "roberto",
+    "descricao": "roberto@gmail.com",
+    "link": "lalalala"
+}
+
+### API PROJETO - PUT
+PUT http://localhost:8080/api/v1/projetos/1
+Content-Type: application/json
+
+{
+    "titulo": "roberto_novo",
+    "descricao": "roberto@gmail.com",
+    "link": "não tenho histórico"
+}
+
+### API PROJETO - DELETE
+DELETE http://localhost:8080/api/v1/projetos/1
+Content-Type: application/json
