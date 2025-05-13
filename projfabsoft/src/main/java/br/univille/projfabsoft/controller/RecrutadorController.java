@@ -58,8 +58,8 @@ public class RecrutadorController {
             return ResponseEntity.notFound().build();
         }
 
-        recrutadorAntigo.setNome(recrutadorAntigo.getNome());
-        recrutadorAntigo.setNomeEmpresa(recrutadorAntigo.getNomeEmpresa());
+        recrutadorAntigo.setNome(recrutador.getNome());
+        recrutadorAntigo.setNomeEmpresa(recrutador.getNomeEmpresa());
         
         service.save(recrutadorAntigo);
         return new ResponseEntity<Recrutador>(recrutadorAntigo,HttpStatus.OK);

@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoft.entity.PlanoDeAssinatura;
 import br.univille.projfabsoft.service.PlanoDeAssinaturaService;
 
+@RestController
 @RequestMapping("/api/v1/planos")
 public class PlanoDeAssinaturaController {
     @Autowired

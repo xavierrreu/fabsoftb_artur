@@ -53,9 +53,9 @@ public class TesteDeHabilidadeController {
         if (testeAntigo==null){
             return ResponseEntity.notFound().build();
         }
-        testeAntigo.setTitulo(testeAntigo.getTitulo());
-        testeAntigo.setDescricao(testeAntigo.getDescricao());
-        testeAntigo.setPontuacao(testeAntigo.getPontuacao());
+        testeAntigo.setTitulo(teste.getTitulo());
+        testeAntigo.setDescricao(teste.getDescricao());
+        testeAntigo.setPontuacao(teste.getPontuacao());
         
         service.save(testeAntigo);
         return new ResponseEntity<TesteDeHabilidade>(testeAntigo, HttpStatus.OK);

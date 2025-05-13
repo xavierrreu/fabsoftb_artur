@@ -25,11 +25,11 @@ public class Recrutador {
     }
 
     public String getNome() {
-        return nomeEmpresa;
+        return nome;
     }
 
-    public void setNome(String nomeEmpresa) {
-        this.nomeEmpresa = nomeEmpresa;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getNomeEmpresa() {

@@ -8,7 +8,7 @@ Content-Type: application/json
 {
     "titulo": "roberto",
     "descricao": "roberto@gmail.com",
-    "pontuacao": "lalalala"
+    "pontuacao": "10"
 }
 
 ### API USUARIO - PUT
@@ -18,7 +18,7 @@ Content-Type: application/json
 {
     "titulo": "roberto_novo",
     "descricao": "roberto@gmail.com",
-    "pontuacao": "não tenho histórico",
+    "pontuacao": "9"
 }
 
 ### API USUARIO - DELETE

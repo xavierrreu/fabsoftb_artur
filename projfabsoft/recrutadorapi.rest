@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
     "nome": "roberto",
-    "nome empresa": "roberto@gmail.com"
+    "nomeEmpresa": "roberto@gmail.com"
 }
 
 ### API RECRUTADOR - PUT
@@ -16,7 +16,7 @@ Content-Type: application/json
 
 {
     "nome": "roberto_novo",
-    "nome empresa": "roberto@gmail.com"
+    "nomeEmpresa": "roberto@gmail.com"
 }
 
 ### API RECRUTADOR - DELETE
