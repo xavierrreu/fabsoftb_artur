@@ -1,0 +1,26 @@
+### API CURSO - GET
+GET http://localhost:8080/api/v1/cursos
+
+### API CURSO - POST
+POST http://localhost:8080/api/v1/cursos
+Content-Type: application/json
+
+{
+    "titulo": "roberto",
+    "descricao": "roberto@gmail.com",
+    "conteudo": "lalala"
+}
+
+### API CURSO - PUT
+PUT http://localhost:8080/api/v1/cursos/1
+Content-Type: application/json
+
+{
+    "titulo": "roberto",
+    "descricao": "roberto@gmail.com",
+    "conteudo": "laSLS"
+}
+
+### API CURSO - DELETE
+DELETE http://localhost:8080/api/v1/cursos/1
+Content-Type: application/json

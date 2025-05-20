@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import br.univille.projfabsoft.entity.Curso;
 import br.univille.projfabsoft.service.CursoService;
 
-
+@RestController
+@RequestMapping("/api/v1/cursos")
 public class CursoController {
     @Autowired
     private CursoService service;
