@@ -10,7 +10,7 @@ export class UsuarioService {
 
   constructor(private http:HttpClient) { }
 
-  getClientes(){
+  getUsuarios(){
     return this.http.get<Usuario[]>(this.apiURL);
   }
 }
