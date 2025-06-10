@@ -1,1 +1,19 @@
-<p>form-usuario works!</p>
+<main class="container">
+    <div class="card"> 
+        <div class="card-body">
+          <div class="form-group">
+              <label for="txtNome">Nome</label>
+              <input type="text" [(ngModel)]="usuario.nome" class="form-control" id="txtNome">
+              <label for="txtEmail">E-mail</label>
+              <input type="text" [(ngModel)]="usuario.email" class="form-control" id="txtEmail">
+              <label for="txtHistProf">Histórico Profissional</label>
+              <input type="text" [(ngModel)]="usuario.historicoProfissional" class="form-control" id="txtHistProf">
+              <label for="txtQualif.">Qualificações</label>
+              <input type="text" [(ngModel)]="usuario.qualificacoes" class="form-control" id="txtQualif.">
+              <label for="txtInteresse">Áreas de Interesse</label>
+              <input type="text" [(ngModel)]="usuario.areasDeInteresse" class="form-control" id="txtInteresse">
+          </div>
+          <button (click)="salvar()" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+</main>

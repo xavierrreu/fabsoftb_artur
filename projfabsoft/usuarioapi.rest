@@ -18,11 +18,11 @@ PUT http://localhost:8080/api/v1/usuarios/1
 Content-Type: application/json
 
 {
-    "nome": "roberto_novo",
+    "nome": "roberto",
     "email": "roberto@gmail.com",
-    "historicoProfissional": "não tenho histórico",
-    "qualificacoes": "lalalala",
-    "areasDeInteresse": "todas as areas"
+    "historicoProfissional": "sem experiência",
+    "qualificacoes": "java, html, sqlserver",
+    "areasDeInteresse": "desenvolvimento de software, ciência de dados"
 }
 
 ### API USUARIO - DELETE
