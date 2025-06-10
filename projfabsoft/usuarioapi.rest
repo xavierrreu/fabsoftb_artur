@@ -6,9 +6,11 @@ POST http://localhost:8080/api/v1/usuarios
 Content-Type: application/json
 
 {
-    "nome": "roberto",
+    "nome": "roberto_novo",
     "email": "roberto@gmail.com",
-    "qualificacoes": "lalalala"
+    "historicoProfissional": "não tenho histórico",
+    "qualificacoes": "lalalala",
+    "areasDeInteresse": "todas as areas"
 }
 
 ### API USUARIO - PUT
