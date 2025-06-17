@@ -1,6 +1,7 @@
 <main class="container">
     <h2>Usuários</h2>
-    <a routerLink="/usuarios/novo" class="btn btn-primary">NOVO</a>
+    <!-- <a routerLink="/usuarios/novo" class="btn btn-primary">NOVO</a> -->
+    <a (click)="novo()" class="btn btn-primary">NOVO</a>
     <table class="table">
         <thead>
             <tr>
@@ -9,6 +10,7 @@
                 <th>Histórico Profissional</th>
                 <th>Qualificaçoes</th>
                 <th>Áreas De Interesse</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +20,7 @@
                 <td>{{umUsuario.historicoProfissional}}</td>
                 <td>{{umUsuario.qualificacoes}}</td>
                 <td>{{umUsuario.areasDeInteresse}}</td>
+                <td><a (click)="alterar(umUsuario)" class="btn btn-secondary">ALTERAR</a></td>
             </tr>
         </tbody>
 

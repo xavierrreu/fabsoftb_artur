@@ -33,6 +33,13 @@ public class UsuarioController {
         return new ResponseEntity<List<Usuario>>(listaUsuarios, HttpStatus.OK);
     }
 
+    @GetMapping("/{id}") //////////////// NECESSÁRIO ALTERAR EM TODOS OS OBJETOS
+    public ResponseEntity<Usuario> getClienteId(@PathVariable Long id){
+        var usuario = service.getById(id);
+
+        return new ResponseEntity<Usuario>(usuario, HttpStatus.OK);
+    }
+
     //ABAIXO ESTÁ O CÓDIGO PARA 'INSERT' DE NOVOS USUÁRIOS VIA HTTP REQUEST
     @PostMapping
     public ResponseEntity<Usuario> postUsuario(@RequestBody Usuario usuario){
