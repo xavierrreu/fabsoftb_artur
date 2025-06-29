@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoft.entity.ProdutorDeConteudo;
+import br.univille.projfabsoft.entity.Usuario;
 import br.univille.projfabsoft.service.ProdutorDeConteudoService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/api/v1/produtores")
+@RequestMapping("/api/v1/produtores-conteudo")
 public class ProdutorDeConteutoController {
     @Autowired
     private ProdutorDeConteudoService service;
@@ -30,6 +31,13 @@ public class ProdutorDeConteutoController {
         var listaProdutores = service.getAll();
 
         return new ResponseEntity<List<ProdutorDeConteudo>>(listaProdutores, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}") //////////////// NECESSÁRIO ALTERAR EM TODOS OS OBJETOS
+    public ResponseEntity<ProdutorDeConteudo> getClienteId(@PathVariable Long id){
+        var produtor = service.getById(id);
+
+        return new ResponseEntity<ProdutorDeConteudo>(produtor, HttpStatus.OK);
     }
 
     @PostMapping

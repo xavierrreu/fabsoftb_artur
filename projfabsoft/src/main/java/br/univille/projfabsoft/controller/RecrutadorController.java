@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoft.entity.Recrutador;
+import br.univille.projfabsoft.entity.Usuario;
 import br.univille.projfabsoft.service.RecrutadorService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,7 +23,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController
-@RequestMapping("/api/v1/recrutadores")
+@RequestMapping("/api/v1/recrutador")
 public class RecrutadorController {
     @Autowired
     private RecrutadorService service;
@@ -32,6 +33,13 @@ public class RecrutadorController {
         var listaRecrutadores = service.getAll();
 
         return new ResponseEntity<List<Recrutador>>(listaRecrutadores,HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}") //////////////// NECESSÁRIO ALTERAR EM TODOS OS OBJETOS
+    public ResponseEntity<Recrutador> getRecrutadorId(@PathVariable Long id){
+        var recrutador = service.getById(id);
+
+        return new ResponseEntity<Recrutador>(recrutador, HttpStatus.OK);
     }
 
     @PostMapping
