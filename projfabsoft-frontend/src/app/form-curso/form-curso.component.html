@@ -1,19 +1,37 @@
-<main class="container">
-    <div class="card"> 
-        <div class="card-body">
-          <div class="form-group">
-            <label for="txtTitulo">Título</label>
-            <input type="text" [(ngModel)]="curso.titulo" class="form-control" id="txtTitulo">
-            <label for="txtDescricao">Descrição</label>
-            <input type="text" [(ngModel)]="curso.descricao" class="form-control" id="txtDescricao">
-            <label for="txtConteudo">Conteúdo</label>
-            <input type="text" [(ngModel)]="curso.conteudo" class="form-control" id="txtConteudo">
-            <label for="txtProdutor">Produtor</label>
-            <select id="txtProdutor" [(ngModel)]="curso.produtor" class="form-select" [compareWith]="comparaProdutores">
-            <option *ngFor="let umProdutor of listaProdutores" [ngValue]="umProdutor">{{ umProdutor.nome }}</option>
-            </select>
-          </div>
-          <button (click)="salvar()" class="btn btn-primary">Salvar</button>
-        </div>
-      </div>
+<main class="page">
+  <!-- Navbar (Preserved) -->
+  <nav class="navbar">
+    <div class="logo">FabSoft</div>
+    <ul class="nav-links">
+      <li><a (click)="usuarios()">Usuários</a></li>
+      <li><a (click)="recrutadores()">Recrutadores</a></li>
+      <li><a (click)="projetos()">Projetos</a></li>
+      <li><a (click)="produtores()">Produtores de Conteúdo</a></li>
+      <li><a (click)="cursos()">Cursos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Form Card -->
+  <div class="form-container">
+    <h2>{{ curso.id ? 'Editar Curso' : 'Novo Curso' }}</h2>
+    <form (ngSubmit)="salvar()">
+      <label for="txtTitulo">Título</label>
+      <input type="text" id="txtTitulo" [(ngModel)]="curso.titulo" name="titulo" required>
+
+      <label for="txtDescricao">Descrição</label>
+      <input type="text" id="txtDescricao" [(ngModel)]="curso.descricao" name="descricao">
+
+      <label for="txtConteudo">Conteúdo</label>
+      <input type="text" id="txtConteudo" [(ngModel)]="curso.conteudo" name="conteudo">
+
+      <label for="txtProdutor">Produtor</label>
+      <select id="txtProdutor" [(ngModel)]="curso.produtor" name="produtor" [compareWith]="comparaProdutores">
+        <option *ngFor="let umProdutor of listaProdutores" [ngValue]="umProdutor">
+          {{ umProdutor.nome }}
+        </option>
+      </select>
+
+      <button type="submit" class="btn-primary">Salvar</button>
+    </form>
+  </div>
 </main>

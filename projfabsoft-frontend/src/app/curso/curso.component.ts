@@ -30,6 +30,27 @@ export class CursoComponent {
     this.router.navigate(['cursos/novo'])
   }
 
+  usuarios(){
+    this.router.navigate(['usuarios']);
+  }
+
+  projetos(){
+    this.router.navigate(['projetos']);
+  }
+
+  cursos(){
+    this.router.navigate(['cursos']);
+  }
+
+  produtores(){
+    this.router.navigate(['produtores']);
+  }
+
+  recrutadores(){
+    this.router.navigate(['recrutadores']);
+  }
+
+
   alterar(curso:Curso){
     this.router.navigate(['cursos/alterar', curso.id]);
   }

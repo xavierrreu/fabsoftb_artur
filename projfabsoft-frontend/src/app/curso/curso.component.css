@@ -1,0 +1,148 @@
+.page {
+  background-color: #1e1f29;
+  color: #f0f0f5;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  background: #1f1f2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo {
+    font-size: 1.5rem;
+    color: #3ddc84;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    li a {
+      color: #f0f0f5;
+      text-decoration: none;
+
+      &:hover {
+        color: #3ddc84;
+        border-bottom: 2px solid #3ddc84;
+        padding-bottom: 2px;
+      }
+    }
+  }
+}
+
+.container {
+  padding: 32px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page-title {
+  color: #3ddc84;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: #3ddc84;
+  color: #1e1f29;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 16px;
+
+  &:hover {
+    background: lighten(#3ddc84, 5%);
+  }
+}
+
+.btn-secondary,
+.btn-danger {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #555;
+  color: white;
+
+  &:hover {
+    background: #777;
+  }
+}
+
+.btn-danger {
+  background: #c0392b;
+  color: white;
+
+  &:hover {
+    background: #e74c3c;
+  }
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #2a2d3f;
+  border-radius: 8px;
+  overflow: hidden;
+
+  th, td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #444;
+    word-break: break-word;
+  }
+
+  th {
+    background: #2f3344;
+    color: #f0f0f5;
+    text-align: left;
+  }
+
+  tbody tr:hover {
+    background: #31354a;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.modal-box {
+  background: #2a2d3f;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  width: 320px;
+
+  h3 {
+    color: #3ddc84;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}

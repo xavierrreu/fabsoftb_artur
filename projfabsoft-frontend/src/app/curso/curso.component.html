@@ -1,28 +1,39 @@
-<main class="container">
+<main class="page">
+        <!-- Existing Navbar (Preserved) -->
+    <nav class="navbar">
+    <div class="logo">FabSoft</div>
+      <ul class="nav-links">
+        <li><a (click)="usuarios()">Usuários</a></li>
+        <li><a (click)="recrutadores()">Recrutadores</a></li>
+        <li><a (click)="projetos()">Projetos</a></li>
+        <li><a (click)="produtores()">Produtores de Conteúdo</a></li>
+        <li><a (click)="cursos()">Cursos</a></li>
+      </ul>
+    </nav>
     <h2>Cursos</h2>
     <!-- <a routerLink="/usuarios/novo" class="btn btn-primary">NOVO</a> -->
     <a (click)="novo()" class="btn btn-primary">NOVO</a>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Descrição</th>
-                <th>Conteúdo</th>
-                <th>Produtor</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let umCurso of listaCursos">
-                <td>{{umCurso.titulo}}</td>
-                <td>{{umCurso.descricao}}</td>
-                <td>{{umCurso.conteudo}}</td>
-                <td>{{umCurso.produtor.nome}}</td>
-                <td><a (click)="alterar(umCurso)" class="btn btn-secondary">ALTERAR</a></td>
-                <td><a (click)="abrirConfirmacao(umCurso)" class="btn btn-danger">EXCLUIR</a></td>
-                <!--botao excluir -->
-            </tr>
-        </tbody>
+<div class="container">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th>Conteúdo</th>
+          <th>Produtor</th>
+          <th colspan="2">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let umCurso of listaCursos">
+          <td>{{ umCurso.titulo }}</td>
+          <td>{{ umCurso.descricao }}</td>
+          <td>{{ umCurso.conteudo }}</td>
+          <td>{{ umCurso.produtor }}</td>
+          <td><button class="btn-secondary" (click)="alterar(umCurso)">✏️</button></td>
+          <td><button class="btn-danger" (click)="abrirConfirmacao(umCurso)">🗑️</button></td>
+        </tr>
+      </tbody>
         <div class="modal fade" #myModal tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -40,4 +51,5 @@
             </div>
         </div>
     </table>
+    </div>
 </main>
