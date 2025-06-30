@@ -16,6 +16,8 @@ import * as bootstrap from 'bootstrap';
 })
 export class UsuarioComponent {
   listaUsuarios: Usuario[] = [];
+  currentUserProjects: any[] = []; // Store the current user's projects
+  selectedUserId: any; // Store se
 
   @ViewChild('myModal') modalElement!: ElementRef;
   private modal!: bootstrap.Modal;
@@ -62,6 +64,16 @@ export class UsuarioComponent {
         this.listaUsuarios = usuarios;
       }
     )
+  }
+
+  mostrarProjetos(usuario: any): void {
+    usuario.mostrarProjetos = !usuario.mostrarProjetos;  // Toggle the 'mostrarProjetos' flag
+    if (usuario.mostrarProjetos) {
+      this.usuarioService.getUsuarioProjects(usuario.id).subscribe((projects: any[]) => {
+        // Store the fetched projects for the user
+        this.currentUserProjects = projects;
+      });
+    }
   }
 
   abrirConfirmacao(usuario:Usuario) {

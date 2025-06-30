@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsuarioService {
   apiURL = "http://localhost:8080/api/v1/usuarios";
+  apiProjectURL = "http://localhost:8080/api/v1/projetos"; // URL para listar projetos por usuario
 
   constructor(private http:HttpClient) { }
 
@@ -27,5 +28,9 @@ export class UsuarioService {
 
   excluirUsuario(id: any){
   return this.http.delete<Usuario>(this.apiURL + '/' + id);
+  }
+
+  getUsuarioProjects(id: any) {
+    return this.http.get<any[]>(`${this.apiProjectURL}/${id}`); // Busca os projetos do usuário
   }
 }

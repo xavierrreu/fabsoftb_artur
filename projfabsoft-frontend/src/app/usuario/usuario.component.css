@@ -61,7 +61,7 @@
   }
 }
 
-.btn-secondary, .btn-danger {
+.btn-secondary, .btn-danger, .btn-info {
   padding: 6px 10px;
   border-radius: 4px;
   margin: 2px;
@@ -81,6 +81,12 @@
   background: #c0392b;
   color: #fff;
   &:hover { background: #e74c3c; }
+}
+
+.btn-info {
+  background: #3498db;
+  color: #fff;
+  &:hover { background: #5dade2; }
 }
 
 .styled-table {
