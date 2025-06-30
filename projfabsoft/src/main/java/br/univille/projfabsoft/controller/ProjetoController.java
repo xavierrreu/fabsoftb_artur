@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoft.entity.Projeto;
+import br.univille.projfabsoft.entity.Usuario;
 import br.univille.projfabsoft.service.ProjetoService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,6 +33,13 @@ public class ProjetoController {
         var listaProjetos = service.getAll();
 
         return new ResponseEntity<List<Projeto>>(listaProjetos, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}") //////////////// NECESSÁRIO ALTERAR EM TODOS OS OBJETOS
+    public ResponseEntity<Projeto> getProjetoId(@PathVariable Long id){
+        var projeto = service.getById(id);
+
+        return new ResponseEntity<Projeto>(projeto, HttpStatus.OK);
     }
 
     @PostMapping

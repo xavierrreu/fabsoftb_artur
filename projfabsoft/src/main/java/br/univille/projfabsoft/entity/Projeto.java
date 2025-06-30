@@ -1,8 +1,10 @@
 package br.univille.projfabsoft.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 
 @Entity
@@ -13,6 +15,8 @@ public class Projeto {
     private String titulo;
     private String descricao;
     private String link;
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.REFRESH})
+    private Usuario usuario;
 
     // Getters e Setters
     public long getId() {
@@ -45,5 +49,12 @@ public class Projeto {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

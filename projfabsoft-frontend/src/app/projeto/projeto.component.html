@@ -1,1 +1,43 @@
-<p>projeto works!</p>
+<main class="container">
+    <h2>Projetos</h2>
+    <!-- <a routerLink="/usuarios/novo" class="btn btn-primary">NOVO</a> -->
+    <a (click)="novo()" class="btn btn-primary">NOVO</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Link</th>
+                <th>Usuário</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umProjeto of listaProjetos">
+                <td>{{umProjeto.titulo}}</td>
+                <td>{{umProjeto.descricao}}</td>
+                <td>{{umProjeto.link}}</td>
+                <td>{{umProjeto.usuario.nome}}</td>
+                <td><a (click)="alterar(umProjeto)" class="btn btn-secondary">ALTERAR</a></td>
+                <td><a (click)="abrirConfirmacao(umProjeto)" class="btn btn-danger">EXCLUIR</a></td>
+                <!--botao excluir -->
+            </tr>
+        </tbody>
+        <div class="modal fade" #myModal tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Excluir projeto</h5>
+                </div>
+                <div class="modal-body">
+                Confirma a exclusão do projeto?
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="fecharConfirmacao()">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)="confirmarExclusao()">Sim</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </table>
+</main>

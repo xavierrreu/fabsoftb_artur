@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoft.entity.Curso;
+import br.univille.projfabsoft.entity.Usuario;
 import br.univille.projfabsoft.service.CursoService;
 
 @RestController
@@ -31,6 +32,13 @@ public class CursoController {
         return new ResponseEntity<List<Curso>>(listaCursos, HttpStatus.OK);
     }
 
+    @GetMapping("/{id}") //////////////// NECESSÁRIO ALTERAR EM TODOS OS OBJETOS
+    public ResponseEntity<Curso> getCursoId(@PathVariable Long id){
+        var curso = service.getById(id);
+
+        return new ResponseEntity<Curso>(curso, HttpStatus.OK);
+    }  
+    
     //ABAIXO ESTÁ O CÓDIGO PARA 'INSERT' DE NOVOS USUÁRIOS VIA HTTP REQUEST
     @PostMapping
     public ResponseEntity<Curso> postCurso(@RequestBody Curso curso){
