@@ -1,11 +1,23 @@
-<main class="container">
-    <div class="card"> 
-        <div class="card-body">
-          <div class="form-group">
-              <label for="txtNome">Nome</label>
-              <input type="text" [(ngModel)]="produtor.nome" class="form-control" id="txtNome">
-          </div>
-          <button (click)="salvar()" class="btn btn-primary">Salvar</button>
-        </div>
-      </div>
+<main class="page">
+    <!-- Existing Navbar (Preserved) -->
+  <nav class="navbar">
+    <div class="logo">FabSoft</div>
+    <ul class="nav-links">
+      <li><a (click)="usuarios()">Usuários</a></li>
+      <li><a (click)="recrutadores()">Recrutadores</a></li>
+      <li><a (click)="projetos()">Projetos</a></li>
+      <li><a (click)="produtores()">Produtores de Conteúdo</a></li>
+      <li><a (click)="cursos()">Cursos</a></li>
+    </ul>
+  </nav>
+<!-- Form Card -->
+  <div class="form-container">
+    <h2>{{ produtor?.id ? 'Editar Produtor' : 'Novo Produtor de Conteúdo' }}</h2>
+    <form (ngSubmit)="salvar()">
+      <label for="txtNome">Nome</label>
+      <input type="text" id="txtNome" [(ngModel)]="produtor.nome" name="nome" required>
+
+      <button type="submit" class="btn-primary">Salvar</button>
+    </form>
+  </div>
 </main>

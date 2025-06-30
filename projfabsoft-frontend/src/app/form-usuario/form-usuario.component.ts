@@ -30,6 +30,26 @@ export class FormUsuarioComponent {
     }
   }
 
+  usuarios(){
+    this.router.navigate(['usuarios']);
+  }
+
+  projetos(){
+    this.router.navigate(['projetos']);
+  }
+
+  cursos(){
+    this.router.navigate(['cursos']);
+  }
+
+  produtores(){
+    this.router.navigate(['produtores']);
+  }
+
+  recrutadores(){
+    this.router.navigate(['recrutadores']);
+  }
+
   salvar(){
     this.usuarioService.saveUsuario(this.usuario)
     .subscribe(resultado => {

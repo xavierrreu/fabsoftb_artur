@@ -1,0 +1,133 @@
+.page {
+  background-color: #1e1f29;
+  color: #f0f0f5;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f1f2e;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  .logo {
+    font-size: 1.4rem;
+    color: #3ddc84;
+    font-weight: bold;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    li a {
+      color: #f0f0f5;
+      text-decoration: none;
+      font-weight: 500;
+      &:hover,
+      &.active {
+        color: #3ddc84;
+        border-bottom: 2px solid #3ddc84;
+        padding-bottom: 4px;
+      }
+    }
+  }
+}
+
+.container {
+  padding: 32px;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: #3ddc84;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: #3ddc84;
+  color: #1e1f29;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    background: lighten(#3ddc84, 5%);
+  }
+}
+
+.btn-secondary, .btn-danger {
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin: 2px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #444;
+  color: #fff;
+  &:hover { background: #666; }
+}
+
+.btn-danger {
+  background: #c0392b;
+  color: #fff;
+  &:hover { background: #e74c3c; }
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+
+  th, td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+  }
+
+  thead {
+    background: #2a2d3f;
+  }
+
+  tbody tr:hover {
+    background-color: #2f3344;
+  }
+
+  .actions {
+    white-space: nowrap;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #2a2d3f;
+  padding: 24px;
+  border-radius: 8px;
+  width: 320px;
+  text-align: center;
+  h3 { color: #3ddc84; margin-bottom: 12px; }
+  p { margin-bottom: 16px; }
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}

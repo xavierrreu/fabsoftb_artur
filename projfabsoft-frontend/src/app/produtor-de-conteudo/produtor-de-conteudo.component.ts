@@ -30,6 +30,26 @@ export class ProdutorDeConteudoComponent {
     this.router.navigate(['produtores/novo'])
   }
 
+  usuarios(){
+    this.router.navigate(['usuarios']);
+  }
+
+  projetos(){
+    this.router.navigate(['projetos']);
+  }
+
+  cursos(){
+    this.router.navigate(['cursos']);
+  }
+
+  produtores(){
+    this.router.navigate(['produtores']);
+  }
+
+  recrutadores(){
+    this.router.navigate(['recrutadores']);
+  }
+
   alterar(produtor:ProdutorConteudo){
     this.router.navigate(['produtores/alterar', produtor.id]);
   }

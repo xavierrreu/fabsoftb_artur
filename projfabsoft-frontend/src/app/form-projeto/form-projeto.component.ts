@@ -42,6 +42,26 @@ export class FormProjetoComponent {
     return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
   }
 
+  usuarios(){
+    this.router.navigate(['usuarios']);
+  }
+
+  projetos(){
+    this.router.navigate(['projetos']);
+  }
+
+  cursos(){
+    this.router.navigate(['cursos']);
+  }
+
+  produtores(){
+    this.router.navigate(['produtores']);
+  }
+
+  recrutadores(){
+    this.router.navigate(['recrutadores']);
+  }
+
   salvar(){
     this.projetoService.saveProjeto(this.projeto)
     .subscribe(resultado => {

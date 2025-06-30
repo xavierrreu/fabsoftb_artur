@@ -1,19 +1,36 @@
-<main class="container">
-    <div class="card"> 
-        <div class="card-body">
-          <div class="form-group">
-              <label for="txtNome">Nome</label>
-              <input type="text" [(ngModel)]="usuario.nome" class="form-control" id="txtNome">
-              <label for="txtEmail">E-mail</label>
-              <input type="text" [(ngModel)]="usuario.email" class="form-control" id="txtEmail">
-              <label for="txtHistProf">Histórico Profissional</label>
-              <input type="text" [(ngModel)]="usuario.historicoProfissional" class="form-control" id="txtHistProf">
-              <label for="txtQualif.">Qualificações</label>
-              <input type="text" [(ngModel)]="usuario.qualificacoes" class="form-control" id="txtQualif.">
-              <label for="txtInteresse">Áreas de Interesse</label>
-              <input type="text" [(ngModel)]="usuario.areasDeInteresse" class="form-control" id="txtInteresse">
-          </div>
-          <button (click)="salvar()" class="btn btn-primary">Salvar</button>
-        </div>
-      </div>
+<main class="page">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">FabSoft</div>
+    <ul class="nav-links">
+      <li><a (click)="usuarios()">Usuários</a></li>
+      <li><a (click)="recrutadores()">Recrutadores</a></li>
+      <li><a (click)="projetos()">Projetos</a></li>
+      <li><a (click)="produtores()">Produtores de Conteúdo</a></li>
+      <li><a (click)="cursos()">Cursos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Form Card -->
+  <div class="form-container">
+    <h2>{{ usuario?.id ? 'Editar Usuário' : 'Novo Usuário' }}</h2>
+    <form (ngSubmit)="salvar()">
+      <label for="txtNome">Nome</label>
+      <input id="txtNome" type="text" [(ngModel)]="usuario.nome" name="nome" required>
+
+      <label for="txtEmail">E-mail</label>
+      <input id="txtEmail" type="email" [(ngModel)]="usuario.email" name="email" required>
+
+      <label for="txtHistProf">Histórico Profissional</label>
+      <input id="txtHistProf" type="text" [(ngModel)]="usuario.historicoProfissional" name="historicoProfissional">
+
+      <label for="txtQualif">Qualificações</label>
+      <input id="txtQualif" type="text" [(ngModel)]="usuario.qualificacoes" name="qualificacoes">
+
+      <label for="txtInteresse">Áreas de Interesse</label>
+      <input id="txtInteresse" type="text" [(ngModel)]="usuario.areasDeInteresse" name="areasDeInteresse">
+
+      <button type="submit" class="btn-primary">Salvar</button>
+    </form>
+  </div>
 </main>

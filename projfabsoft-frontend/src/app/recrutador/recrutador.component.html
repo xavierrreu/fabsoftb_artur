@@ -1,24 +1,37 @@
-<main class="container">
-    <h2>Recrutadores</h2>
-    <!-- <a routerLink="/usuarios/novo" class="btn btn-primary">NOVO</a> -->
-    <a (click)="novo()" class="btn btn-primary">NOVO</a>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Nome da Empresa</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let umRecrutador of listaRecrutadores">
-                <td>{{umRecrutador.nome}}</td>
-                <td>{{umRecrutador.nomeEmpresa}}</td>
-                <td><a (click)="alterar(umRecrutador)" class="btn btn-secondary">ALTERAR</a></td>
-                <td><a (click)="abrirConfirmacao(umRecrutador)" class="btn btn-danger">EXCLUIR</a></td>
-                <!--botao excluir -->
-            </tr>
-        </tbody>
+<main class="page">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">FabSoft</div>
+    <ul class="nav-links">
+      <li><a (click)="usuarios()">Usuários</a></li>
+      <li><a (click)="recrutadores()">Recrutadores</a></li>
+      <li><a (click)="projetos()">Projetos</a></li>
+      <li><a (click)="produtores()">Produtores de Conteúdo</a></li>
+      <li><a (click)="cursos()">Cursos</a></li>
+    </ul>
+  </nav>
+<h2 >Recrutadores</h2>
+
+    <a (click)="novo()" class="btn-primary">+ Novo Recrutador</a>
+
+  <!-- Page Content -->
+  <div class="container">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Empresa</th>
+          <th colspan="2">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let umRecrutador of listaRecrutadores">
+          <td>{{ umRecrutador.nome }}</td>
+          <td>{{ umRecrutador.nomeEmpresa }}</td>
+          <td><button class="btn-secondary" (click)="alterar(umRecrutador)">✏️</button></td>
+          <td><button class="btn-danger" (click)="abrirConfirmacao(umRecrutador)">🗑️</button></td>
+        </tr>
+      </tbody>
         <div class="modal fade" #myModal tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -36,4 +49,5 @@
             </div>
         </div>
     </table>
+    </div>
 </main>

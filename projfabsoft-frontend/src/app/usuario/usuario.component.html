@@ -1,30 +1,42 @@
-<main class="container">
+<main class="page">
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <div class="logo">FabSoft</div>
+    <ul class="nav-links">
+      <li><a (click)="usuarios()">Usuários</a></li>
+      <li><a (click)="recrutadores()">Recrutadores</a></li>
+      <li><a (click)="projetos()">Projetos</a></li>
+      <li><a (click)="produtores()">Produtores de Conteúdo</a></li>
+      <li><a (click)="cursos()">Cursos</a></li>
+    </ul>
+  </nav>
     <h2>Usuários</h2>
     <!-- <a routerLink="/usuarios/novo" class="btn btn-primary">NOVO</a> -->
     <a (click)="novo()" class="btn btn-primary">NOVO</a>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Histórico Profissional</th>
-                <th>Qualificaçoes</th>
-                <th>Áreas De Interesse</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let umUsuario of listaUsuarios">
-                <td>{{umUsuario.nome}}</td>
-                <td>{{umUsuario.email}}</td>
-                <td>{{umUsuario.historicoProfissional}}</td>
-                <td>{{umUsuario.qualificacoes}}</td>
-                <td>{{umUsuario.areasDeInteresse}}</td>
-                <td><a (click)="alterar(umUsuario)" class="btn btn-secondary">ALTERAR</a></td>
-                <td><a (click)="abrirConfirmacao(umUsuario)" class="btn btn-danger">EXCLUIR</a></td>
-                <!--botao excluir -->
-            </tr>
-        </tbody>
+      <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Histórico Profissional</th>
+          <th>Qualificações</th>
+          <th>Áreas de Interesse</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let umUsuario of listaUsuarios">
+          <td>{{umUsuario.nome}}</td>
+          <td>{{umUsuario.email}}</td>
+          <td>{{umUsuario.historicoProfissional}}</td>
+          <td>{{umUsuario.qualificacoes}}</td>
+          <td>{{umUsuario.areasDeInteresse}}</td>
+          <td class="actions">
+            <a (click)="alterar(umUsuario)" class="btn-secondary">✏️</a>
+            <a (click)="abrirConfirmacao(umUsuario)" class="btn-danger">🗑️</a>
+          </td>
+        </tr>
+      </tbody>
         <div class="modal fade" #myModal tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
