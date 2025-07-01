@@ -12,6 +12,7 @@ import { ProjetoComponent } from './projeto/projeto.component';
 import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
+    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
     { path: 'usuarios', component: UsuarioComponent},
     { path: 'usuarios/novo', component: FormUsuarioComponent},
     { path: 'usuarios/alterar/:id', component: FormUsuarioComponent},
