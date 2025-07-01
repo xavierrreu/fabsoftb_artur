@@ -9,6 +9,7 @@ import { FormCursoComponent } from './form-curso/form-curso.component';
 import { CursoComponent } from './curso/curso.component';
 import { FormProjetoComponent } from './form-projeto/form-projeto.component';
 import { ProjetoComponent } from './projeto/projeto.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     { path: 'usuarios', component: UsuarioComponent},
@@ -25,5 +26,6 @@ export const routes: Routes = [
     { path: 'cursos/alterar/:id', component: FormCursoComponent},
     { path: 'projetos', component: ProjetoComponent},
     { path: 'projetos/novo', component: FormProjetoComponent},
-    { path: 'projetos/alterar/:id', component: FormProjetoComponent}
+    { path: 'projetos/alterar/:id', component: FormProjetoComponent},
+    { path: 'welcome', component: LoginComponent }
 ];
